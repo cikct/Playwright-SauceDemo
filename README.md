@@ -8,7 +8,7 @@ Application under test : https://www.saucedemo.com
 Credentials: Username: standard_user , Password: secret_sauce
 
 The test covers the following user journey:
-**`tests/purchase-flow.spec.ts`** 
+**`tests/PurchaseFlow.spec.ts`** 
 1. Login with a valid user account 
 2. Identify and add the two cheapest products to the cart
 3. Verify cart item count
@@ -18,7 +18,7 @@ The test covers the following user journey:
 7. Complete the purchase
 8. Verify order confirmation page
 
- **`tests/login-negative.spec.ts`** 
+ **`tests/LoginFailure.spec.ts`** 
 1.  attempts login with a wrong password and asserts the exact error message text.
 
 ---
