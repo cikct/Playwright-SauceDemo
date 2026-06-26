@@ -75,7 +75,7 @@ PLAYWRIGHT-SAUCEDEMO
 Note:For the purpose of this assessment, the test suite is configured to run on Chromium only to simplify execution
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/cikct/Playwright-SauceDemo.git
 cd Playwright-SauceDemo
 npm install                          #install dependencies
 npx playwright install chromium      #install playwright browser - chromium
