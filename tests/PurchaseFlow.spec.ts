@@ -19,14 +19,11 @@ test.describe('Purchase Flow', () => {
     // Step 2: Add two cheapest products to the cart
     const selectedProducts = await productPage.addTwoCheapestProductsToCart();
     for (const product of selectedProducts) {
-      const productName = await product.product
-        .locator('[data-test="inventory-item-name"]')
-        .innerText();
-
+      const productName = await product.product.locator('[data-test="inventory-item-name"]').innerText();
       console.log(`Added to cart: ${productName} - $${product.price}`);
     }
 
-    // Step 3: Verify that the cart has 2 items and proceed to checkout
+    // Step 3: Verify that the cart has 2 items 
     await cartPage.getCartItemCount(2);
 
     //step 4: Open cart and proceed to checkout page

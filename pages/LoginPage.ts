@@ -1,12 +1,12 @@
 import { Page, Locator , expect} from '@playwright/test';
 
 export class LoginPage {
-  private readonly baseUrl: string = 'https://www.saucedemo.com';
+   private readonly baseUrl: string = 'https://www.saucedemo.com';
   page: Page;
-  private readonly usernameInput: Locator;
-  private readonly passwordInput: Locator;
-  private readonly submitButton: Locator;
-  private readonly loginErrorMessage: Locator;
+   private readonly usernameInput: Locator;
+   private readonly passwordInput: Locator;
+   private readonly submitButton: Locator;
+   private readonly loginErrorMessage: Locator;
 
 
   constructor(page: Page) {

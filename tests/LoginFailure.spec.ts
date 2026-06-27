@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 
 test.describe('Login Failure Tests', () => {
@@ -7,6 +7,8 @@ test.describe('Login Failure Tests', () => {
     await loginPage.goto();
     await loginPage.login('standard_user', '123456');
     await loginPage.expectInvalidCredentialsError();
+   
+    
   }
 
 )

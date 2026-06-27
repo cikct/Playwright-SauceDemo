@@ -6,7 +6,6 @@ type Product = {
 };
 
 export class ProductPage {
-  private readonly baseUrl: string = 'https://www.saucedemo.com/inventory.html';
   page: Page;
   private readonly productCards: Locator;
 
@@ -15,9 +14,6 @@ export class ProductPage {
     this.productCards = page.locator('[data-test="inventory-item"]');
   }
 
-   /* async goto() {
-        await this.page.goto(this.baseUrl); 
-    } */
 
   async addTwoCheapestProductsToCart() {
     const products = await this.productCards.all();
@@ -36,7 +32,6 @@ export class ProductPage {
     productList.sort((a, b) => a.price - b.price);
 
     const twoCheapestProducts = productList.slice(0, 2);
-
 
   for (const item of twoCheapestProducts) {
     await item.product.getByRole('button', { name: 'Add to cart' }).click();
