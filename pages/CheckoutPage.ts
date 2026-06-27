@@ -1,7 +1,7 @@
 import { Page, Locator, expect } from '@playwright/test';
 
 export class CheckoutPage {
-    //private readonly baseUrl: string = 'https://www.saucedemo.com/checkout.html';
+
     page: Page;
     private readonly firstNameInput: Locator;
     private readonly lastNameInput: Locator;
@@ -31,10 +31,6 @@ export class CheckoutPage {
         this.tax = page.locator('[data-test="tax-label"]');
         this.finalTotal = page.locator('[data-test="total-label"]');
     }
-
-   /* async goto() {
-        await this.page.goto(this.baseUrl); 
-    } */
 
     async fillCheckoutInfo(firstName: string, lastName: string, postalCode: string) {
         await this.firstNameInput.fill(firstName);

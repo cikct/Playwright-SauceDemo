@@ -2,7 +2,7 @@ import { Page, Locator, expect } from '@playwright/test';
 
 
 export class CartPage {
-   // private readonly baseUrl: string = 'https://www.saucedemo.com/cart.html';
+
     page: Page;
     private readonly cartlink: Locator;
     private readonly cartBadge: Locator;
@@ -16,9 +16,7 @@ export class CartPage {
         this.checkoutButton = page.locator('[data-test="checkout"]');
     }
 
-   /* async goto() {
-        await this.page.goto(this.baseUrl); 
-    } */
+
     async openCart() {
         await this.cartlink.click();
     }
