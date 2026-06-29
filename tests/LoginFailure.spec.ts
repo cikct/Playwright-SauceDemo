@@ -7,8 +7,6 @@ test.describe('Login Failure Tests', () => {
     await loginPage.goto();
     await loginPage.login('standard_user', '123456');
     await loginPage.expectInvalidCredentialsError();
-   
-    
   }
 
 )

@@ -72,7 +72,7 @@ PLAYWRIGHT-SAUCEDEMO
 - Node.js 18+ and npm
 
 ## Setup
-Note:For the purpose of this assessment, the test suite is configured to run on Chromium only to simplify execution
+Note:For the purpose of this assessment, the test suite is configured to run on Chromium only to simplify the execution
 
 ```bash
 git clone https://github.com/cikct/Playwright-SauceDemo.git
