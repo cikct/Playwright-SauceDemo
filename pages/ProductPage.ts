@@ -17,7 +17,6 @@ export class ProductPage {
 
   async addTwoCheapestProductsToCart() {
     const products = await this.productCards.all();
-
     const productList: Product[] = [];
 
     for (const product of products) {
