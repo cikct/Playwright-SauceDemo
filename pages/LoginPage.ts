@@ -1,7 +1,7 @@
 import { Page, Locator , expect} from '@playwright/test';
 
 export class LoginPage {
-   private readonly baseUrl: string = 'https://www.saucedemo.com';
+   //private readonly baseUrl: string = 'https://www.saucedemo.com'; //moved to playwright.config.ts
   page: Page;
    private readonly usernameInput: Locator;
    private readonly passwordInput: Locator;
@@ -18,8 +18,8 @@ export class LoginPage {
   
   }
 
-  async goto() {
-    await this.page.goto(this.baseUrl);
+  async navigateToLoginpage() {
+    await this.page.goto('/');
   }
 
   async login(username: string, password: string) {

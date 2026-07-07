@@ -92,13 +92,14 @@ npm test    # Run all tests in the project
 
 ## Future Improvements
 
-The current implementation focuses on delivering the core requirements of the assessment, including end-to-end purchase flow automation, Page Object Model (POM) design, dynamic product selection, and checkout validation.
+The current implementation delivers the core assessment requirements and includes additional improvements such as centralized configuration, externalized test data, enhanced reporting, and improved test readability through test.step().
 
-Given additional time, the following enhancements could be considered:
+In Future, the following enhancements could be considered:
 
-1. **Playwright fixtures** — Centralize repeated setup (e.g. login, page object instantiation) to reduce duplication across test files.
-2. **Data-driven testing** — Parameterize tests (e.g. login with multiple credential sets) to expand coverage without duplicating test logic.
-3. **Reporting** - Improve reporting and logging to provide more detailed execution results and facilitate troubleshooting
+1. Playwright fixtures — Centralize common setup activities such as page object initialization and reusable test preconditions to further reduce duplication across test files.
+2. Data-driven testing — Expand the test data layer to support multiple datasets and parameterized test execution, enabling broader coverage without duplicating test logic.
+3. Environment Management — Support multiple environments (e.g. QA, UAT, Production) through environment variables and configuration files.
+
 
 
 
