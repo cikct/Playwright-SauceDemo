@@ -26,8 +26,7 @@ test.describe('Purchase Flow', () => {
     await test.step('Add two cheapest products to the cart', async () => {
       const selectedProducts = await productPage.addTwoCheapestProductsToCart();
       for (const product of selectedProducts) {
-       const productName = await product.product.locator('[data-test="inventory-item-name"]').innerText();
-       console.log(`Added to cart: ${productName} - $${product.price}`);
+       console.log(`Added to cart: ${product.productName} - $${product.price}`);
     }
   });
 

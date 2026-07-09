@@ -2,6 +2,7 @@ import { Page, Locator } from '@playwright/test';
 
 type Product = {
   product: Locator;
+  productName: string;
   price: number;
 };
 
@@ -12,6 +13,7 @@ export class ProductPage {
   constructor(page: Page) {
     this.page = page;
     this.productCards = page.locator('[data-test="inventory-item"]');
+    
   }
 
 
@@ -22,9 +24,11 @@ export class ProductPage {
     for (const product of products) {
       const priceText = await product.locator('[data-test="inventory-item-price"]').innerText();
       const price = Number(priceText.replace(/[^0-9.]/g, ''));
+      const productName = await product.locator('[data-test="inventory-item-name"]').innerText();
 
       productList.push({
         product,
+        productName,
         price
       });
     }
