@@ -97,8 +97,7 @@ The current implementation delivers the core assessment requirements and include
 In Future, the following enhancements could be considered:
 
 1. Playwright fixtures — Centralize common setup activities such as page object initialization and reusable test preconditions to further reduce duplication across test files.
-2. Data-driven testing — Expand the test data layer to support multiple datasets and parameterized test execution, enabling broader coverage without duplicating test logic.
-3. Environment Management — Support multiple environments (e.g. QA, UAT, Production) through environment variables and configuration files.
+2. Environment Management — Support multiple environments (e.g. QA, UAT, Production) through environment variables and configuration files.
 
 
 
